@@ -67,7 +67,7 @@ weights={
     "fb3" : weight_variable("fb3", shape=[29])
 }
 
-# CNN
+# CNN + coordinate tagging + concat question embedding
 def mergeCNNLSTM(X, lstmo):
 #def CNN_output(X):
     # CONV layer 1
@@ -128,6 +128,8 @@ def LSTM_output(question_X):
     return tf.squeeze(tf.gather(outputs,sentenceLen-1))
     #return tf.squeeze(outputs[-1])
 
+
+# Deprecated : merging cnn/lstm outputs are done in CNN_output(currently mergeCNNLSTM) defined above.
 #def mergeCNNLSTM(visObjects, qEncoding):
 #
 #    visObjects = tf.unstack(visObjects, axis=0)
