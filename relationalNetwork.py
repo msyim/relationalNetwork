@@ -129,6 +129,7 @@ def LSTM_output(question_X):
     #return tf.squeeze(outputs[-1])
 
 #def mergeCNNLSTM(visObjects, qEncoding):
+#
 #    visObjects = tf.unstack(visObjects, axis=0)
 #    output_list = []
 #    for el in visObjects :
@@ -154,9 +155,9 @@ def fPhi(fInput):
     
     return h3
 
+# Updated : concatenation of visual objects and lstm output is done in mergeCNNLSTM
+# this modification consumes less memory.
 lstmo = LSTM_output(question_X)
-#cnno = CNN_output(X)
-#gInput = mergeCNNLSTM(cnno, lstmo)
 gInput = mergeCNNLSTM(X, lstmo)
 fInput = gTheta(gInput)
 fOutput = fPhi(fInput)
