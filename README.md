@@ -1,5 +1,5 @@
 # Relational Network
-A TF implementation of the paper : "A simple neural network module for relational reasoning"
+A TF implementation of the paper : ["A simple neural network module for relational reasoning"](https://arxiv.org/pdf/1706.01427.pdf)
 
 ## Architecture
 image source: https://cdn-images-1.medium.com/max/2000/1*Fzkj-lSVmCGkptOwfbwUnA.png
